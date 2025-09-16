@@ -1,5 +1,4 @@
-import { Map, Popup } from "maplibre-gl";
-import type { MapLayerMouseEvent } from "maplibre-gl";
+import { Map } from "maplibre-gl";
 import townships from "../data/townships-simple.geojson?url";
 
 export function addTownshipsLayer(map: Map, id = "sample") {
