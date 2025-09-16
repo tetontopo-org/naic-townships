@@ -1,0 +1,93 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+.app {
+  display: grid;
+  grid-template-rows: 1fr;
+  height: 100%;
+}
+.app-header {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  font-family: system-ui, sans-serif;
+}
+.map-wrap {
+  position: relative;
+  height: 100%;
+}
+.map {
+  position: absolute;
+  inset: 0;
+}
+.maplibregl-ctrl-group {
+  box-shadow: none;
+} /* tiny style nicety */
+
+/* Map Title Styles */
+.map-title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ffffff;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 18px;
+  line-height: 1.4;
+  z-index: 1001;
+  backdrop-filter: blur(4px);
+}
+
+.map-title-text {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Dev Tool Styles */
+.dev-tool {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  z-index: 1000;
+  min-width: 200px;
+  backdrop-filter: blur(4px);
+}
+
+.dev-tool-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #00ff88;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 4px;
+}
+
+.dev-tool-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.dev-tool-item:last-child {
+  margin-bottom: 0;
+}
+
+.dev-tool-label {
+  color: #cccccc;
+  margin-right: 8px;
+}
+
+.dev-tool-value {
+  color: #ffffff;
+  font-weight: 500;
+}
