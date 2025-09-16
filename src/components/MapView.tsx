@@ -4,6 +4,7 @@ import { MAP_CONFIG } from "../config/map";
 import MapControls from "./MapControls";
 //import DevTool from "./DevTool";
 import MapTitle from "./MapTitle";
+import LoadingScreen from "./LoadingScreen";
 import { addTownshipsLayer } from "../layers/TownshipsLayer";
 
 export default function MapView() {
@@ -38,6 +39,7 @@ export default function MapView() {
 
   return (
     <div className="map-wrap">
+      <LoadingScreen isLoading={!ready} />
       <div id={MAP_CONFIG.containerId} className="map" />
       <MapTitle />
       <MapControls map={map ?? null} />
